@@ -1,32 +1,23 @@
 {
-  "name": "@splainez/n8n-nodes-phonenumber-parser",
-  "version": "1.0.3",
-  "description": "Parse a phone number and return its information",
+  "name": "n8n-nodes-lark-auth",
+  "version": "1.0.11",
+  "description": "Lark authentication custom node for n8n",
   "keywords": [
-    "n8n-community-node-package",
-    "telephone",
-    "phone",
-    "number",
-    "mobile",
-    "libphonenumber"
+    "n8n-community-node-package"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/splainez/n8n-nodes-phonenumber-parser",
+  "homepage": "https://websitegiare.net",
   "author": {
-    "name": "splainez"
+    "name": "Websitegiare.net",
+    "email": "binhsg.contact@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/splainez/n8n-nodes-phonenumber-parser.git"
+    "url": "https://github.com/Nabis188/n8n-nodes-lark-authentication.git"
   },
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "build": "tsc && gulp build:icons",
-    "dev": "tsc --watch",
-    "format": "prettier nodes --write",
-    "lint": "eslint nodes package.json",
-    "lintfix": "eslint nodes package.json --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes package.json"
+    "build": "tsc"
   },
   "files": [
     "dist"
@@ -35,19 +26,11 @@
     "n8nNodesApiVersion": 1,
     "credentials": [],
     "nodes": [
-      "dist/nodes/PhoneNumberParser/PhoneNumberParser.node.js"
+      "dist/nodes/LarkAuthentication/LarkAuthentication.node.js"
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.1",
-    "eslint-plugin-n8n-nodes-base": "^1.16.2",
-    "gulp": "^4.0.2",
     "n8n-workflow": "*",
-    "prettier": "^3.3.3",
-    "typescript": "~5.5.4"
-  },
-  "dependencies": {
-    "libphonenumber-js": "^1.11.11"
+    "typescript": "^5.7.2"
   }
 }
